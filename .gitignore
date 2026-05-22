@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+predictions.csv
+outputs/
+logs/
+
+# Private training data are intentionally not part of the public release.
+data/private/**
+!data/private/
+!data/private/README.md
+!data/private/training_tables/
+!data/private/training_tables/README.md
+

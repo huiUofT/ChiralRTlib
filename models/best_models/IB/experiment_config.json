@@ -1,0 +1,19 @@
+{
+  "approach": "approach3",
+  "column": "IB",
+  "joint_train": true,
+  "rs_threshold": 0.75,
+  "data_dir": "data/private/training_tables",
+  "out_dir": "outputs/reproduced/IB",
+  "split": "scaffold",
+  "test_size": 0.2,
+  "seed": 2028,
+  "n_seeds": 5,
+  "mpnn_hidden": 600,
+  "mpnn_depth": 4,
+  "ffn_hidden": 600,
+  "dropout": 0.1,
+  "epochs": 200,
+  "patience": 30,
+  "accelerator": "gpu"
+}

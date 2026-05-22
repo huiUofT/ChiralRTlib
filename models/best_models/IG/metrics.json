@@ -1,0 +1,13 @@
+{
+  "approach": "approach3",
+  "column": "IG",
+  "joint_train": true,
+  "rs_threshold": 0.75,
+  "n_train": 34689,
+  "n_test": 2099,
+  "optimal_threshold": 0.6741206030150754,
+  "ba_thr05": 0.673903713745128,
+  "f1_thr05": 0.8379421221864952,
+  "ba_opt": 0.694799848965974,
+  "f1_opt": 0.7970085470085471
+}

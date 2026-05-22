@@ -1,0 +1,17 @@
+{
+  "approach": "approach3",
+  "column": "IC",
+  "rs_threshold": 1.5,
+  "joint_train": true,
+  "use_3d": false,
+  "feature_dim": 26,
+  "n_train": 34689,
+  "n_test": 2130,
+  "optimal_threshold": 0.3530150753768844,
+  "ba_thr05": 0.7082352161523338,
+  "f1_thr05": 0.6737626397019691,
+  "ba_opt": 0.7352934679361152,
+  "f1_opt": 0.7394881170018281,
+  "roc_auc": 0.797458746603636,
+  "pr_auc": 0.7473255102353883
+}

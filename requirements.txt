@@ -1,0 +1,10 @@
+chemprop==2.2.3
+lightning
+numpy
+pandas
+rdkit
+scikit-learn
+scipy
+torch
+typing_extensions
+
