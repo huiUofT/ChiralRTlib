@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DATA_DIR="${1:-data/private/training_tables}"
+DATA_DIR="${1:-training_tables}"
 ACCELERATOR="${ACCELERATOR:-gpu}"
 
 run_column() {
@@ -31,4 +31,3 @@ run_column IA 0.5
 run_column IB 0.75
 run_column IC 1.5
 run_column IG 0.75
-

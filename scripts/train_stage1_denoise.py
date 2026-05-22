@@ -17,7 +17,7 @@ Example:
         --column IC \
         --joint_train \
         --rs_threshold 1.5 \
-        --data_dir data/private/training_tables \
+        --data_dir training_tables \
         --out_dir outputs/reproduced/IC \
         --accelerator gpu
 """
@@ -482,7 +482,7 @@ def parse_args():
     ap.add_argument("--joint_train",  action="store_true",
                     help="Train on all 4 columns jointly; evaluate on IC test slice")
     ap.add_argument("--rs_threshold", type=float, default=1.0)
-    ap.add_argument("--data_dir",  default="data/private/training_tables")
+    ap.add_argument("--data_dir",  default="training_tables")
     ap.add_argument("--out_dir",   required=True)
     ap.add_argument("--split",     choices=["scaffold", "scaffold_cv"], default="scaffold")
     ap.add_argument("--test_size", type=float, default=0.2)

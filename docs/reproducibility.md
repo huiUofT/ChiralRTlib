@@ -39,14 +39,14 @@ and writes `p_separated` plus `pred_label`.
 Prepare the private training tables described in `docs/data_format.md`:
 
 ```text
-data/private/training_tables/IA_stage1.csv
-data/private/training_tables/IA_stage2_rs.csv
-data/private/training_tables/IB_stage1.csv
-data/private/training_tables/IB_stage2_rs.csv
-data/private/training_tables/IC_stage1.csv
-data/private/training_tables/IC_stage2_rs.csv
-data/private/training_tables/IG_stage1.csv
-data/private/training_tables/IG_stage2_rs.csv
+training_tables/IA_stage1.csv
+training_tables/IA_stage2_rs.csv
+training_tables/IB_stage1.csv
+training_tables/IB_stage2_rs.csv
+training_tables/IC_stage1.csv
+training_tables/IC_stage2_rs.csv
+training_tables/IG_stage1.csv
+training_tables/IG_stage2_rs.csv
 ```
 
 Then run the released best-model settings for each column:
@@ -57,7 +57,7 @@ python scripts/train_stage1_denoise.py \
   --column IA \
   --joint_train \
   --rs_threshold 0.5 \
-  --data_dir data/private/training_tables \
+  --data_dir training_tables \
   --out_dir outputs/reproduced/IA \
   --split scaffold \
   --seed 2028 \
@@ -84,7 +84,7 @@ released columns:
 Or run all four released configurations:
 
 ```bash
-bash scripts/reproduce_best_models.sh data/private/training_tables
+bash scripts/reproduce_best_models.sh training_tables
 ```
 
 The script writes:
@@ -107,7 +107,7 @@ python scripts/train_stage1_denoise.py \
   --column IC \
   --joint_train \
   --rs_threshold 1.5 \
-  --data_dir data/private/training_tables \
+  --data_dir training_tables \
   --out_dir outputs/cv5/IC/fold_0 \
   --split scaffold_cv \
   --fold_idx 0 \

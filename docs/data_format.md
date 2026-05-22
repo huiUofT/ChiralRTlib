@@ -1,8 +1,8 @@
 # Training Data Format
 
 The public repository does not include the original curated data. To reproduce
-training, provide derived training tables in `data/private/training_tables/`
-with the following names:
+training, provide derived training tables in a local directory such as
+`training_tables/` with the following names:
 
 ```text
 {column}_stage1.csv
@@ -45,4 +45,3 @@ mol_id,rs
 
 The training script left-joins `rs` onto the Stage 1 table by `mol_id`. Missing
 `rs` values are expected for negative examples.
-

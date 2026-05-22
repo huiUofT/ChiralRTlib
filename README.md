@@ -12,8 +12,8 @@ This public release includes:
 - model metadata, validation metrics, and reproducibility instructions.
 
 The original curated training data are not included in this repository. Training
-can be reproduced by placing data tables with the documented schema under
-`data/private/training_tables/`.
+can be reproduced by providing compatible training tables with the documented
+schema.
 
 ## Installation
 
