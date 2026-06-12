@@ -1,5 +1,0 @@
-mol_id,smiles
-example_1,CC(C)C(N)C(=O)O
-example_2,COC(=O)C1=CC=CC=C1
-example_invalid,not_a_smiles
-

@@ -1,8 +1,7 @@
 # Training Data Format
 
-The public repository does not include the original curated data. To reproduce
-training, provide derived training tables in a local directory such as
-`training_tables/` with the following names:
+The released derived training tables are stored in `training_tables/` with the
+following names:
 
 ```text
 {column}_stage1.csv

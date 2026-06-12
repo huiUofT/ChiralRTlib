@@ -55,7 +55,7 @@ models/best_models/{IA,IB,IC,IG}/experiment_config.json
 ```
 
 Optional scaffold cross-validation can be reproduced with the commands in
-`docs/reproducibility.md` when compatible private training tables are available.
+`docs/reproducibility.md` using the released derived training tables.
 
 ## Intended Use
 
@@ -66,6 +66,5 @@ as screening signals rather than definitive experimental outcomes.
 ## Limitations
 
 Performance depends on similarity between new molecules and the training data
-distribution. The original training data are not included in the public
-repository, so third-party retraining requires compatible private or newly
-curated tables following the documented schema.
+distribution. Retraining uses the released derived tables in `training_tables/`;
+new external datasets should follow the documented schema.

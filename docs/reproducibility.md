@@ -3,10 +3,11 @@
 This release supports two levels of reproducibility:
 
 1. Reproduce inference exactly from the released checkpoints.
-2. Reproduce training when compatible private training tables are supplied.
+2. Reproduce training from the released derived training tables.
 
-The original curated training data are intentionally not included in this
-public repository.
+The released prediction input table is stored at
+`data/processed/filtered_molecules.csv`. The upstream chromatographic input
+table is stored at `data/raw/Results_Chiral_Final_input.csv`.
 
 ## 1. Reproduce Released Inference
 
@@ -16,12 +17,12 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run the example:
+Run inference on the released molecule table:
 
 ```bash
 python models/best_models/predict.py \
   --column IC \
-  --smiles_file examples/example_smiles.csv \
+  --smiles_file data/processed/filtered_molecules.csv \
   --out_file predictions.csv
 ```
 
@@ -36,7 +37,7 @@ and writes `p_separated` plus `pred_label`.
 
 ## 2. Reproduce Best-Model Training
 
-Prepare the private training tables described in `docs/data_format.md`:
+Use the released derived training tables described in `docs/data_format.md`:
 
 ```text
 training_tables/IA_stage1.csv
@@ -99,7 +100,7 @@ seed_*/checkpoints/*.ckpt
 
 ## 3. Five-Fold Evaluation
 
-To repeat a scaffold cross-validation fold with private data:
+To repeat a scaffold cross-validation fold with the released training tables:
 
 ```bash
 python scripts/train_stage1_denoise.py \

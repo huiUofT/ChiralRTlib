@@ -4,7 +4,7 @@
 Example:
     python models/best_models/predict.py \
         --column IC \
-        --smiles_file examples/example_smiles.csv \
+        --smiles_file data/processed/filtered_molecules.csv \
         --out_file predictions.csv
 
 The output CSV contains the separation probability (`p_separated`) and a

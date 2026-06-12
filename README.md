@@ -8,12 +8,13 @@ This public release includes:
 
 - trained best checkpoints and scalers under `models/best_models/`;
 - a prediction script for new SMILES;
-- a small example input file;
+- the released prediction input table under `data/processed/`;
+- derived training tables under `training_tables/`;
 - model metadata, validation metrics, and reproducibility instructions.
 
-The original curated training data are not included in this repository. Training
-can be reproduced by providing compatible training tables with the documented
-schema.
+The released derived training tables can be used to reproduce the best-model
+training workflow. The upstream raw chromatographic table is also provided
+under `data/raw/` for traceability.
 
 ## Installation
 
@@ -30,7 +31,7 @@ Run the released ensemble on one column:
 ```bash
 python models/best_models/predict.py \
   --column IC \
-  --smiles_file examples/example_smiles.csv \
+  --smiles_file data/processed/filtered_molecules.csv \
   --out_file predictions.csv
 ```
 
@@ -65,9 +66,11 @@ See [docs/reproducibility.md](docs/reproducibility.md) for:
 ## Repository Layout
 
 ```text
+data/raw/                   Upstream chromatographic input table
+data/processed/             Released SMILES table for inference
+training_tables/            Derived stage-1 and Rs tables for retraining
 models/best_models/        Released ensembles, scalers, metrics, configs
 scripts/                   Training script used for model reproduction
-examples/                  Minimal public SMILES input
 docs/                      Model card, data format, and reproducibility notes
 ```
 

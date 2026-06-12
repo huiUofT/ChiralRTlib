@@ -7,7 +7,4 @@ predictions.csv
 outputs/
 logs/
 
-# Private training data are intentionally not part of the public release.
-training_tables/
 private_data/
-data/
