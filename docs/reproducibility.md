@@ -9,6 +9,12 @@ The released prediction input table is stored at
 `data/processed/filtered_molecules.csv`. The upstream chromatographic input
 table is stored at `data/raw/Results_Chiral_Final_input.csv`.
 
+The upstream IG external-test extraction pipeline is available under
+`data_processing/`. See `data_processing/README.md` for raw mzML requirements,
+manual-review semantics, exact scientific parameters, and checksum-based
+provenance verification. The directory contains workflow code only and does not
+publish the source mzML files or manual-review artifacts.
+
 ## 1. Reproduce Released Inference
 
 Install dependencies:

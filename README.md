@@ -16,6 +16,11 @@ The released derived training tables can be used to reproduce the best-model
 training workflow. The upstream raw chromatographic table is also provided
 under `data/raw/` for traceability.
 
+The public preprocessing code used for targeted IG mzML extraction and manual
+curation is documented in [`data_processing/README.md`](data_processing/README.md).
+It includes portable command-line scripts, scientific parameters, per-run
+provenance generation, and checksum verification without publishing source data.
+
 ## Installation
 
 Create a fresh Python environment, then install dependencies:
@@ -71,6 +76,7 @@ data/processed/             Released SMILES table for inference
 training_tables/            Derived stage-1 and Rs tables for retraining
 models/best_models/        Released ensembles, scalers, metrics, configs
 scripts/                   Training script used for model reproduction
+data_processing/           IG mzML extraction and curation workflow
 docs/                      Model card, data format, and reproducibility notes
 ```
 

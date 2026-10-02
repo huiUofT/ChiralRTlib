@@ -2,9 +2,8 @@
 """Train ChiralRTlib stage-1 separation classifiers.
 
 The released best models use approach3 with joint training over IA, IB, IC,
-and IG. The original curated training data are not distributed in this public
-repository; provide compatible derived training tables with the schema in
-docs/data_format.md.
+and IG. The derived training tables needed by this script are distributed in
+``training_tables/`` and follow the schema in ``docs/data_format.md``.
 
 Noise-handling options:
   approach1: remove positive training examples with Rs < rs_threshold.

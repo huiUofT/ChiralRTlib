@@ -3,7 +3,7 @@
   "column": "IB",
   "joint_train": true,
   "rs_threshold": 0.75,
-  "data_dir": "data/private/training_tables",
+  "data_dir": "training_tables",
   "out_dir": "outputs/reproduced/IB",
   "split": "scaffold",
   "test_size": 0.2,
